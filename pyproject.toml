@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "api-graveyard"
+version = "0.1.0"
+description = "Official Python collector for API Graveyard — automatically tracks your outgoing HTTP dependencies"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "urllib3>=1.26",
+]
+keywords = ["api", "monitoring", "dependency", "tracking", "http", "observability"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+
+[project.urls]
+Homepage = "https://api-graveyard.com"
+Repository = "https://github.com/Shakargy/api-graveyard-python"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "urllib3>=2"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["api_graveyard*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
