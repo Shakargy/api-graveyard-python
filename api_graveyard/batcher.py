@@ -24,7 +24,7 @@ class Batcher:
     ) -> None:
         self._api_key = api_key
         self._project_id = project_id
-        self._endpoint = f"{base_url}/api/v1/projects/{project_id}/ingest/events/"
+        self._endpoint = f"{base_url}/api/v1/projects/{project_id}/ingest/events"
         self._max_batch_size = max_batch_size
         self._debug = debug
         self._queue: List[HttpEvent] = []
